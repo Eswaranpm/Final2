@@ -1,0 +1,34 @@
+h1 {
+    text-align: center;
+    color: lightcoral;
+    font-size: 2rem
+}
+
+h2 {
+    text-align: center;
+    color: black;
+}
+
+h3 {
+    text-align: center;
+    color: lightcoral;
+    font-size: 2rem;
+}
+
+div{
+    text-align: center;
+    color: lightpink;
+    font-size: 1rem
+}
+
+.block{
+    display: block;
+    text-align: center;
+    width: 50%;
+    padding: 25px;
+    position: absolute;
+    z-index: 100;
+    width: 250px;
+    height: 50px;
+    font-size: 1rem;
+}

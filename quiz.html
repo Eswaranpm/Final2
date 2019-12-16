@@ -1,0 +1,105 @@
+<html>
+        <html lang="en">
+    <head>
+        <title>Study Score</title>
+        <link rel="stylesheet" href="quiz.css"> 
+        <meta name="viewport" content="width=device-width, initial-scale=1">   
+        <script src="results.js"></script>  
+    </head>
+
+    <body>
+        <form id="myForm" onsubmit="submiForm()">
+        <div class="jumbotron text-center">
+        <h2>(Be honest!)</h2>
+        </div>
+        <div class="container"></div>
+            <div class="row">
+                <div class="col-sm-7">
+                    <h1>Is the Subject you are studying is easy?</h1>
+                    <p>(This answer should change the more you study)</p>
+                    <input type="radio" name="gasp" value="1" > No<br>
+                <input type="radio" name="gasp" value="2" > A little<br>
+                <input type="radio" name="gasp" value="3" > Most of the time<br>
+                <input type="radio" name="gasp" value="4" > Yes<br> 
+                </div>
+                <div class="container"></div>
+                <div class="row">
+                <div class="col-sm-7"></div>
+                    <h3>Are you a good at grasping the content?</h3>
+                    <input type="radio" name="task" value="1" > No<br>
+                <input type="radio" name="task" value="2" > A little<br>
+                <input type="radio" name="task" value="3" > Most of the time<br>
+                <input type="radio" name="task" value="4" > Yes<br> 
+                </div>
+                <div class="container"></div>
+                <div class="row">
+                <div class="col-sm-7"></div>
+                    <h3>Are you a good test taker?</h3>
+                    <input type="radio" name="work" value="1" > No<br>
+                <input type="radio" name="work" value="2" > A little<br>
+                <input type="radio" name="work" value="3" > Most of the time<br>
+                <input type="radio" name="work" value="4" > Yes<br> 
+                </div>
+                <div class="container"></div>
+                <div class="row">
+                <div class="col-sm-7"></div>
+                    <h3>Do you do your homework for that class?</h3>
+                    <input type="radio" name="listener" value="1" > No<br>
+                <input type="radio" name="listener" value="2" > A little<br>
+                <input type="radio" name="listener" value="3" > Most of the time<br>
+                <input type="radio" name="listener" value="4" > Yes<br> 
+                </div>
+                <div class="container"></div>
+                <div class="row">
+                <div class="col-sm-7"></div>
+                    <h3>Are you good at good listener?</h3>  
+                    <input type="radio" name="other" value="1" > No<br>
+                <input type="radio" name="other" value="2" > A little<br>
+                <input type="radio" name="other" value="3" > Most of the time<br>
+                <input type="radio" name="other" value="4" > Yes<br> 
+                </div>
+                <div class="container"></div>
+                <div class="row">
+                <div class="col-sm-7"></div>
+                    <button type="submit" onclick="onsubmit()">Submit</button>
+                    <button type="reset" onclick="myFunction()">Reset</button>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<script>
+function myFunction(){
+    document.getElementById("Myform").reset();
+}
+
+function submiForm(){
+    var x1 = document.forms["myForm"]["gasp"].value;
+    var x2 = document.forms["myForm"]["task"].value;
+    var x3 = document.forms["myForm"]["work"].value;
+    var x4 = document.forms["myForm"]["listener"].value;
+    var x5 = document.forms["myForm"]["other"].value;
+
+    if (x1 == "" || x2 == "" || x3 == "" || x4 == "" || x5 == ""){
+        alert("Pleasr answer all the questions.");
+        return false;
+    }else{
+            var tot = Number(x1)+Number(x2)+Number(x2)+Number(x3)+Number(x4)+Number(x5);
+            //alert(tot);
+            if ( tot >=5 && tot <=8 ){
+                alert("You have to study a lot more, but you've got this!.");
+            }else if (tot >=9 && tot <=13 ){
+                alert("You have a good base understanding, keep studying.");
+            }else if (tot >=14 && tot <=19 ){
+                alert("You're so close, keep studying for perfection.");
+            }else if (tot >=20){
+                alert("Great Work, You are ready for that test");
+            }
+    }
+}
+</script>
+</form>
+</body>
+</html>
+
+<a href="file:///Users/praveenaeswaran/Desktop/final2/results.html"><button autofocus="autofocus" style="background-color: lightpink" class="block">Resources for Studying</button>
